@@ -1,0 +1,7 @@
+PATIENT CLINICAL LAB REPORT
+Patient: John Doe, DOB: 1980-01-01
+Date: 2026-09-20
+Facility: St. Jude Health
+Test: Comprehensive Metabolic Panel
+Glucose: 98 mg/dL (Ref: 70-99) - Normal
+Creatinine: 0.9 mg/dL (Ref: 0.6-1.2) - Normal

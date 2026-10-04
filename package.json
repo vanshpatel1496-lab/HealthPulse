@@ -1,0 +1,24 @@
+{
+  "name": "healthpulse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HealthPulse - Personal health dashboard, medical document analyzer, and preliminary symptom triage",
+  "scripts": {
+    "build:shared": "npm --prefix shared run build",
+    "build:server": "npm --prefix server run build",
+    "build:client": "npm --prefix client run build",
+    "build": "npm run build:shared && npm run build:server && npm run build:client",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev"
+  },
+  "keywords": [
+    "healthpulse",
+    "healthcare",
+    "ai",
+    "gemini",
+    "react",
+    "express"
+  ],
+  "author": "HealthPulse Team",
+  "license": "UNLICENSED"
+}

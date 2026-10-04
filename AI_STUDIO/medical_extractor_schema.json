@@ -1,0 +1,189 @@
+{
+  "type": "object",
+  "properties": {
+    "document_type": {
+      "type": "string",
+      "enum": [
+        "lab_report",
+        "prescription",
+        "discharge_summary",
+        "other"
+      ]
+    },
+    "document_title": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "report_date": {
+      "type": "string"
+    },
+    "patient_name": {
+      "type": "string"
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "test_name": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "reference_range": {
+            "type": "string"
+          },
+          "flag": {
+            "type": "string",
+            "enum": [
+              "normal",
+              "high",
+              "low",
+              "critical",
+              "unknown"
+            ]
+          },
+          "needs_review": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "test_name",
+          "value",
+          "unit",
+          "reference_range",
+          "flag",
+          "needs_review"
+        ]
+      }
+    },
+    "medications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "medication_name": {
+            "type": "string"
+          },
+          "strength": {
+            "type": "string"
+          },
+          "form": {
+            "type": "string"
+          },
+          "dose": {
+            "type": "string"
+          },
+          "frequency": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "string"
+          },
+          "route": {
+            "type": "string"
+          },
+          "instructions": {
+            "type": "string"
+          },
+          "needs_review": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "medication_name",
+          "strength",
+          "form",
+          "dose",
+          "frequency",
+          "duration",
+          "route",
+          "instructions",
+          "needs_review"
+        ]
+      }
+    },
+    "discharge_summary": {
+      "type": "object",
+      "properties": {
+        "hospital_name": {
+          "type": "string"
+        },
+        "admission_date": {
+          "type": "string"
+        },
+        "discharge_date": {
+          "type": "string"
+        },
+        "attending_physician": {
+          "type": "string"
+        },
+        "reason_for_admission": {
+          "type": "string"
+        },
+        "diagnoses_listed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "procedures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "follow_up_instructions": {
+          "type": "string"
+        },
+        "patient_instructions": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "hospital_name",
+        "admission_date",
+        "discharge_date",
+        "attending_physician",
+        "reason_for_admission",
+        "diagnoses_listed",
+        "procedures",
+        "follow_up_instructions",
+        "patient_instructions"
+      ]
+    },
+    "extraction_status": {
+      "type": "string",
+      "enum": [
+        "success",
+        "partial",
+        "needs_review",
+        "failed"
+      ]
+    },
+    "review_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "document_type",
+    "document_title",
+    "provider",
+    "report_date",
+    "patient_name",
+    "tests",
+    "medications",
+    "discharge_summary",
+    "extraction_status",
+    "review_notes"
+  ]
+}

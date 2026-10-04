@@ -1,0 +1,82 @@
+{
+  "type": "object",
+  "properties": {
+    "urgency": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "emergency"
+      ]
+    },
+    "information_complete": {
+      "type": "boolean"
+    },
+    "missing_information": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reported_symptoms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "duration": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "mild",
+        "moderate",
+        "severe",
+        "unknown"
+      ]
+    },
+    "associated_symptoms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "key_observations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "suggested_next_step": {
+      "type": "string"
+    },
+    "warning_signs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "emergency_action_required": {
+      "type": "boolean"
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "urgency",
+    "information_complete",
+    "missing_information",
+    "reported_symptoms",
+    "duration",
+    "severity",
+    "associated_symptoms",
+    "key_observations",
+    "suggested_next_step",
+    "warning_signs",
+    "emergency_action_required",
+    "disclaimer"
+  ]
+}
